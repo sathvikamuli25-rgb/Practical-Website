@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile First Design</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: lightblue;
+            padding: 30px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .box {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Mobile First Design</h1>
+
+    <div class="container">
+        <div class="box">HTML</div>
+        <div class="box">CSS</div>
+        <div class="box">JavaScript</div>
+    </div>
+
+</body>
+</html>

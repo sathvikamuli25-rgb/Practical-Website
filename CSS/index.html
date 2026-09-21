@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Programs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+    <a class="back" href="../index.html">← Back to Home</a>
+    <p class="subtitle">WEB TECHNOLOGY PRACTICAL</p>
+    <h1>CSS Programs</h1>
+    <p>75 CSS practical programs and experiments</p>
+</header>
+
+<main class="container">
+
+    <div class="section-title">
+        <p>EXPLORE</p>
+        <h2>CSS Practical Programs</h2>
+    </div>
+
+    <div class="program-grid" id="programGrid"></div>
+
+</main>
+
+<footer>
+    <p>Web Technology Practical Programs</p>
+    <span>HTML • CSS • JavaScript</span>
+</footer>
+
+<script>
+const programs = [
+    "Inline, Internal and External CSS",
+    "CSS Selectors",
+    "Colors, Backgrounds and Borders",
+    "Font and Text Formatting",
+    "CSS Box Model",
+    "Width, Height and Sizing",
+    "CSS Positioning",
+    "Float and Clear",
+    "Navigation Bar",
+    "Pseudo-Classes",
+    "Pseudo-Elements",
+    "Lists and Tables",
+    "Registration Form",
+    "Flexbox",
+    "CSS Grid",
+    "Responsive Design",
+    "Transitions and Transformations",
+    "CSS Animations",
+    "Responsive Navigation",
+    "Personal Portfolio",
+    "College Student Profile",
+    "Login Page",
+    "Product Card",
+    "Responsive Photo Gallery",
+    "Website Homepage",
+    "Inheritance and Specificity",
+    "CSS Selectors",
+    "Combinator Selectors",
+    "CSS Variables",
+    "Background Images and Positioning",
+    "Gradients",
+    "Shadows",
+    "Border Radius",
+    "Opacity and Transparency",
+    "Overflow",
+    "Z-Index",
+    "Display Property",
+    "Visibility",
+    "Dropdown Menu",
+    "Image Hover Effect",
+    "Tooltip",
+    "CSS Button Hover Animation",
+    "CSS Filters",
+    "Object Fit and Object Position",
+    "Responsive Gallery",
+    "Card Layout using Flexbox",
+    "Dashboard using Grid",
+    "Two-Column Grid",
+    "Three-Column Flexbox",
+    "Sticky Header",
+    "Fixed Sidebar",
+    "Responsive Footer",
+    "Responsive Login and Signup",
+    "Responsive Contact Page",
+    "Responsive College Website",
+    "Restaurant Webpage",
+    "Shopping Webpage",
+    "Travel Homepage",
+    "News and Blog Grid",
+    "Portfolio with Multiple Sections",
+    "Grid Template Areas",
+    "Flexbox Alignment and Ordering",
+    "Responsive Grid with Media Queries",
+    "Mobile-First Design",
+    "CSS Transitions",
+    "2D and 3D Transforms",
+    "Keyframe Animations",
+    "Loading Spinner",
+    "Sliding Image or Card Animation",
+    "CSS-Only Modal or Popup",
+    "Dark Mode using CSS Variables",
+    "Responsive Typography",
+    "Clamp, Min and Max",
+    "Calc Function",
+    "Complete Responsive Website"
+];
+
+const grid = document.getElementById("programGrid");
+
+programs.forEach((program, index) => {
+    const number = index + 1;
+
+    grid.innerHTML += `
+        <div class="program-card">
+            <div class="program-number">
+                PROGRAM ${String(number).padStart(2, "0")}
+            </div>
+
+            <h2>${program}</h2>
+
+            <p>
+                CSS practical program demonstrating ${program.toLowerCase()}.
+            </p>
+
+            <a href="viewer.html?file=${number}.html">
+                Explore Program →
+            </a>
+        </div>
+    `;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combinator Selectors</title>
+
+    <style>
+        .parent p {
+            color: blue;
+        }
+
+        .parent > p {
+            font-weight: bold;
+        }
+
+        .parent + p {
+            color: red;
+        }
+
+        .parent ~ p {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="parent">
+        <p>Direct child paragraph</p>
+
+        <section>
+            <p>Descendant paragraph</p>
+        </section>
+    </div>
+
+    <p>Adjacent sibling paragraph</p>
+
+    <p>General sibling paragraph</p>
+
+</body>
+</html>

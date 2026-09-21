@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sliding Image Animation</title>
+
+    <style>
+        .container {
+            width: 300px;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        .image {
+            width: 300px;
+            animation: slide 3s infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(100px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sliding Image Animation</h1>
+
+    <div class="container">
+        <img class="image" src="https://picsum.photos/300/200" alt="Sample Image">
+    </div>
+
+</body>
+</html>
