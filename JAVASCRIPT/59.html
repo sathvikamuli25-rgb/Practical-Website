@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frequency</title>
+</head>
+<body>
+
+<script>
+let arr = [1, 2, 2, 3, 3, 3, 4];
+let frequency = {};
+
+for (let item of arr) {
+    frequency[item] = (frequency[item] || 0) + 1;
+}
+
+for (let item in frequency) {
+    document.write(item + " : " + frequency[item] + "<br>");
+}
+</script>
+
+</body>
+</html>

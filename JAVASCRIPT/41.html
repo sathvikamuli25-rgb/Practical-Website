@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inheritance</title>
+</head>
+<body>
+
+<script>
+class Animal {
+    eat() {
+        document.write("Animal eats<br>");
+    }
+}
+
+class Dog extends Animal {
+    bark() {
+        document.write("Dog barks");
+    }
+}
+
+let dog = new Dog();
+
+dog.eat();
+dog.bark();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+</head>
+<body>
+
+<form onsubmit="return login()">
+    <input id="username" placeholder="Username"><br><br>
+    <input id="password" type="password" placeholder="Password"><br><br>
+    <button>Login</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+function login() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username == "" || password == "") {
+        document.getElementById("result").innerHTML = "Enter username and password";
+        return false;
+    }
+
+    document.getElementById("result").innerHTML = "Login successful";
+    return false;
+}
+</script>
+
+</body>
+</html>
