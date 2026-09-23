@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Contact Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: lightgray;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .info,
+        .form {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Contact Us</h1>
+
+    <div class="container">
+
+        <div class="info">
+            <h2>Contact Information</h2>
+            <p>Email: example@gmail.com</p>
+            <p>Phone: 9876543210</p>
+            <p>Address: Hyderabad, India</p>
+        </div>
+
+        <div class="form">
+            <h2>Send Message</h2>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button>Send</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

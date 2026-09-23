@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid Template Areas</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px 300px 80px;
+            gap: 10px;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: lightgreen;
+            padding: 20px;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: lightyellow;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: lightgray;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h2>Header</h2>
+        </div>
+
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+            <p>Home</p>
+            <p>About</p>
+            <p>Contact</p>
+        </div>
+
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>This section uses CSS Grid Template Areas.</p>
+        </div>
+
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

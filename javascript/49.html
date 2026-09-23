@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GCD</title>
+</head>
+<body>
+
+<script>
+let a = 24;
+let b = 36;
+
+while (b != 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+}
+
+document.write("GCD: " + a);
+</script>
+
+</body>
+</html>

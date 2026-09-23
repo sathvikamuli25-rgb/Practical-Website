@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+
+<h2>What is 2 + 2?</h2>
+
+<button onclick="checkAnswer(3)">3</button>
+<button onclick="checkAnswer(4)">4</button>
+<button onclick="checkAnswer(5)">5</button>
+
+<p id="result"></p>
+
+<script>
+function checkAnswer(answer) {
+    if (answer == 4) {
+        document.getElementById("result").innerHTML = "Correct!";
+    } else {
+        document.getElementById("result").innerHTML = "Wrong!";
+    }
+}
+</script>
+
+</body>
+</html>

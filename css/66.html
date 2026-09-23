@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Keyframe Animation</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            animation: move 3s infinite;
+        }
+
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+
+            50% {
+                left: 300px;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Keyframe Animation</h1>
+
+    <div class="box"></div>
+
+</body>
+</html>

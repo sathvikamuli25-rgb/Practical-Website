@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Programs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <a class="back" href="../index.html">← Back to Home</a>
+    <p class="subtitle">WEB TECHNOLOGY PRACTICAL</p>
+    <h1>JavaScript Programs</h1>
+    <p>67 JavaScript practical programs and experiments</p>
+</header>
+
+<main class="container">
+
+    <div class="section-title">
+        <p>EXPLORE</p>
+        <h2>JavaScript Practical Programs</h2>
+    </div>
+
+    <div class="program-grid" id="programGrid"></div>
+
+</main>
+
+<footer>
+    <p>Web Technology Practical Programs</p>
+    <span>HTML • CSS • JavaScript</span>
+</footer>
+
+<script>
+const programs = [
+    "Hello World",
+    "Arithmetic Operations",
+    "Largest of Three Numbers",
+    "Even or Odd",
+    "Positive, Negative, or Zero",
+    "Factorial",
+    "Fibonacci Series",
+    "Prime Number",
+    "Palindrome Number",
+    "Reverse a Number",
+    "Sum of Digits",
+    "Largest and Smallest in Array",
+    "Sort an Array",
+    "Sum and Average of Array",
+    "JavaScript Functions",
+    "Arrow Functions",
+    "Strings and String Methods",
+    "Arrays and Array Methods",
+    "Objects",
+    "Date and Math Objects",
+    "DOM Introduction",
+    "Change Text",
+    "Change Background Color",
+    "Button Click Event",
+    "Show and Hide Element",
+    "Change Image on Button Click",
+    "Digital Clock",
+    "Simple Calculator",
+    "Number Guessing Game",
+    "Form Validation",
+    "Name, Email, Phone and Password Validation",
+    "To-Do List",
+    "Quiz Application",
+    "Counter Application",
+    "Stopwatch",
+    "Countdown Timer",
+    "Advanced JavaScript",
+    "ES6 Features",
+    "Spread and Rest Operators",
+    "Classes and Objects",
+    "Inheritance",
+    "Callbacks, Promises and Async/Await",
+    "Fetch API",
+    "Display API Data Dynamically",
+    "Local Storage",
+    "Responsive Login Form with Validation",
+    "Complete Interactive Webpage",
+    "Swap Two Numbers",
+    "GCD",
+    "LCM",
+    "Armstrong Number",
+    "Perfect Number",
+    "Multiplication Table",
+    "Power of a Number",
+    "Count Digits",
+    "Second Largest in Array",
+    "Remove Duplicates from Array",
+    "Merge Arrays",
+    "Frequency of Array Elements",
+    "Common Elements in Arrays",
+    "Reverse a String",
+    "String Palindrome",
+    "Vowels and Consonants",
+    "Word Count",
+    "Character Frequency",
+    "Regular Expression",
+    "Email Validation using Regex"
+];
+
+const grid = document.getElementById("programGrid");
+
+programs.forEach((program, index) => {
+    const number = index + 1;
+
+    grid.innerHTML += `
+        <div class="program-card">
+            <div class="program-number">
+                PROGRAM ${String(number).padStart(2, "0")}
+            </div>
+
+            <h2>${program}</h2>
+
+            <p>
+                JavaScript practical program demonstrating ${program.toLowerCase()}.
+            </p>
+
+            <a href="viewer.html?file=${number}.html">
+                Explore Program →
+            </a>
+        </div>
+    `;
+});
+</script>
+
+</body>
+</html>

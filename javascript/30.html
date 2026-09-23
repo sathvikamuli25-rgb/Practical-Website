@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+
+<form onsubmit="return validateForm()">
+
+    <input id="name" type="text" placeholder="Name"><br><br>
+    <input id="email" type="email" placeholder="Email"><br><br>
+    <input id="phone" type="text" placeholder="Phone"><br><br>
+    <input id="password" type="password" placeholder="Password"><br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+    function validateForm() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let password = document.getElementById("password").value;
+
+        if (name == "" || email == "" || phone == "" || password == "") {
+            document.getElementById("message").innerHTML = "All fields are required";
+            return false;
+        }
+
+        document.getElementById("message").innerHTML = "Validation successful";
+        return false;
+    }
+</script>
+
+</body>
+</html>

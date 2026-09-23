@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Homepage</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+        }
+
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #ddd;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 250px;
+            padding: 25px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Website</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>Learn, Create and Explore</p>
+    </div>
+
+    <div class="content">
+        <h2>Our Services</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Web Design</h3>
+                <p>Creative website designs.</p>
+            </div>
+
+            <div class="card">
+                <h3>Development</h3>
+                <p>Modern web development.</p>
+            </div>
+
+            <div class="card">
+                <h3>Support</h3>
+                <p>Reliable technical support.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+
+</body>
+</html>
