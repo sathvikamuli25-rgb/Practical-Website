@@ -10,241 +10,123 @@ body {
     color: #1e293b;
 }
 
-nav {
-    height: 72px;
-    background: white;
+header {
+    background: linear-gradient(135deg, #e0f2fe, #dbeafe);
+    padding: 35px 25px 50px;
+    text-align: center;
     border-bottom: 1px solid #e2e8f0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 7%;
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: 700;
-    color: #1e293b;
-}
-
-.nav-links {
-    display: flex;
-    gap: 35px;
-}
-
-.nav-links a {
+.home {
+    display: inline-block;
+    margin-bottom: 35px;
     text-decoration: none;
-    color: #64748b;
-    font-size: 15px;
+    color: #475569;
     font-weight: 600;
 }
 
-.nav-links a:hover {
+.home:hover {
     color: #2563eb;
 }
 
-.hero {
-    max-width: 1150px;
-    margin: 0 auto;
-    padding: 85px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.hero-text {
-    max-width: 700px;
-}
-
-.small-title {
-    color: #64748b;
-    font-size: 13px;
-    font-weight: 700;
+.subtitle {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: bold;
     letter-spacing: 2px;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
-.hero h1 {
-    font-size: 64px;
-    line-height: 1.05;
+header h1 {
+    font-size: 46px;
     color: #0f172a;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
 }
 
-.description {
-    max-width: 580px;
+header > p:last-child {
     color: #64748b;
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 17px;
 }
 
-.hero-box {
-    min-width: 230px;
-    height: 230px;
-    border-radius: 24px;
-    background: linear-gradient(145deg, #e0f2fe, #ede9fe);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 35px;
-}
-
-.hero-box span {
-    font-size: 65px;
-    font-weight: 700;
-    color: #334155;
-}
-
-.hero-box p {
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 5px;
-}
-
-.hero-box small {
-    color: #64748b;
-    margin-top: 10px;
-}
-
-main {
+.container {
     max-width: 1150px;
     margin: 0 auto;
-    padding: 20px 30px 80px;
+    padding: 55px 25px 80px;
 }
 
-.section-heading {
+.section-title {
     margin-bottom: 30px;
 }
 
-.section-heading p {
-    color: #64748b;
+.section-title p {
+    color: #2563eb;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 8px;
 }
 
-.section-heading h2 {
-    font-size: 32px;
+.section-title h2 {
+    font-size: 30px;
     color: #0f172a;
 }
 
-.program-list {
-    display: flex;
-    flex-direction: column;
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .program-card {
-    min-height: 220px;
-    display: flex;
-    align-items: stretch;
     background: white;
     border: 1px solid #e2e8f0;
-    border-radius: 18px;
-    overflow: hidden;
+    border-radius: 16px;
+    padding: 28px;
+    min-height: 210px;
     transition: 0.25s ease;
 }
 
 .program-card:hover {
-    transform: translateX(8px);
-    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.09);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
 }
 
-.card-number {
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
-    font-weight: 700;
-}
-
-.html-card .card-number {
-    background: #e0f2fe;
+.program-number {
     color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 18px;
 }
 
-.css-card .card-number {
-    background: #ede9fe;
-    color: #7c3aed;
-}
-
-.js-card .card-number {
-    background: #ccfbf1;
-    color: #0f766e;
-}
-
-.card-content {
-    flex: 1;
-    padding: 30px 35px;
-}
-
-.tag {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.html-card .tag {
-    color: #2563eb;
-}
-
-.css-card .tag {
-    color: #7c3aed;
-}
-
-.js-card .tag {
-    color: #0f766e;
-}
-
-.card-content h3 {
-    font-size: 27px;
-    margin: 8px 0 12px;
+.program-card h2 {
+    font-size: 21px;
     color: #1e293b;
+    margin-bottom: 12px;
 }
 
-.card-content p {
+.program-card p {
     color: #64748b;
+    font-size: 14px;
     line-height: 1.6;
-    max-width: 700px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
-.card-content a {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
+.program-card a {
     text-decoration: none;
-    font-weight: 700;
-}
-
-.html-card a {
     color: #2563eb;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-.css-card a {
-    color: #7c3aed;
-}
-
-.js-card a {
-    color: #0f766e;
-}
-
-.card-content a span {
-    font-size: 20px;
-    transition: 0.2s;
-}
-
-.card-content a:hover span {
-    transform: translateX(5px);
+.program-card a:hover {
+    color: #1d4ed8;
 }
 
 footer {
     background: #0f172a;
     color: white;
-    padding: 30px;
     text-align: center;
+    padding: 28px;
 }
 
 footer p {
@@ -257,66 +139,22 @@ footer span {
     font-size: 14px;
 }
 
-@media (max-width: 800px) {
-
-    nav {
-        padding: 0 25px;
-    }
-
-    .nav-links {
-        gap: 15px;
-    }
-
-    .hero {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 60px 25px;
-    }
-
-    .hero h1 {
-        font-size: 46px;
-    }
-
-    .hero-box {
-        width: 100%;
-    }
-
-    main {
-        padding: 20px 25px 60px;
-    }
-
-    .card-number {
-        width: 100px;
+@media (max-width: 900px) {
+    .program-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 550px) {
-
-    .nav-links {
-        display: none;
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 34px;
     }
 
-    .hero h1 {
-        font-size: 38px;
+    .program-grid {
+        grid-template-columns: 1fr;
     }
 
-    .description {
-        font-size: 16px;
-    }
-
-    .program-card {
-        flex-direction: column;
-    }
-
-    .card-number {
-        width: 100%;
-        height: 80px;
-        justify-content: flex-start;
-        padding-left: 30px;
-        font-size: 32px;
-    }
-
-    .card-content {
-        padding: 25px;
+    .container {
+        padding: 40px 18px 60px;
     }
 }
