@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Program</title>
     <link rel="stylesheet" href="viewer-style.css">
 </head>
+
 <body>
 
 <header>
-    <a href="index.html">← Back to HTML Programs</a>
+    <a href="index.html" class="back-btn">← Back to HTML Programs</a>
     <h1 id="title">HTML Program</h1>
 </header>
 
@@ -19,7 +22,7 @@
 <div class="container">
 
     <div id="codeBox">
-        <pre id="code"></pre>
+        <pre id="code">Loading...</pre>
     </div>
 
     <div id="outputBox">
@@ -29,34 +32,34 @@
 </div>
 
 <script>
-const params = new URLSearchParams(window.location.search);
-const file = params.get("file");
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get("file");
 
-const number = file.replace(".html", "");
+    // Check whether a file was provided
+    if (!file) {
+        document.getElementById("title").textContent = "Program Not Found";
+        document.getElementById("code").textContent =
+            "No HTML program was selected.";
+    } else {
 
-document.getElementById("title").textContent =
-    "HTML Program " + number;
+        const number = file.replace(".html", "");
 
-fetch(file)
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("code").textContent = data;
-    });
+        document.getElementById("title").textContent =
+            "HTML Program " + number;
 
-document.getElementById("output").src = file;
-
-function showCode() {
-    document.getElementById("codeBox").style.display = "block";
-    document.getElementById("outputBox").style.display = "none";
-}
-
-function showOutput() {
-    document.getElementById("codeBox").style.display = "none";
-    document.getElementById("outputBox").style.display = "block";
-}
-
-showCode();
+        // Load source code
+        fetch(file)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("File not found");
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById("code").textContent = data;
+            })
+            .catch(error => {
+                document.getElementById("code").textContent = "Error loading source code.";
+            });
+    }
 </script>
-
-</body>
-</html>
